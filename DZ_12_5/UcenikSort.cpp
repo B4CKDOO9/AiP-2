@@ -59,7 +59,7 @@ int main()
         ime_prezime = buffer;
         delete[] buffer;
         cout << ime_prezime << " " << prosjek << endl;
-    }
+    }//git test
     datotekaIn.close();
     return 0;
 }
