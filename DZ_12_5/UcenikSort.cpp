@@ -22,7 +22,7 @@ int main()
 {
     struct Ucenik ucenici[100];
     int brUcenika = 0;
-    fstream datotekica("DZ_12_5\podatci.bin", ios::binary | ios::in);
+    fstream datotekica("DZ_12_5\\podatci.bin", ios::binary | ios::in);
     while(datotekica.read((char*)&ucenici[brUcenika],sizeof(Ucenik)))
     {
         cout << ucenici[brUcenika].imePrezime << " " << ucenici[brUcenika].prosjek << endl;
@@ -40,7 +40,7 @@ int main()
 
     sort(ucenici, ucenici + brUcenika + n, cmp);
 
-    datotekica.open("DZ_12_5\podatci.bin", ios::binary | ios::out | ios::trunc);
+    datotekica.open("DZ_12_5\\podatci.bin", ios::binary | ios::out | ios::trunc);
 
     datotekica.write((char *)&ucenici, sizeof(Ucenik) * (brUcenika + n));
 
