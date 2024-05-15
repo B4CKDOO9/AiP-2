@@ -34,7 +34,7 @@ int main()
     cin >> n;
     for (int i = 0; i < n; i++)
     {
-        cin.getline(ucenici[brUcenika + i].imePrezime[50]);
+        cin.getline(ucenici[brUcenika + i].imePrezime,50);
         cin >> ucenici[brUcenika].prosjek;
     }
 
