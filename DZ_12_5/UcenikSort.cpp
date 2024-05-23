@@ -40,3 +40,4 @@ int main()
     datotekica.close();
     return 0;
 }
+//comit
