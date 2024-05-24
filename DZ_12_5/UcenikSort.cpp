@@ -20,7 +20,7 @@ int main()
 {
     struct Ucenik ucenici[100];
     int brUcenika = 0;
-    fstream datotekica("podatci.bin", ios::binary | ios::in);
+    fstream datotekica("C:/Users/Gb-gama/Documents/GitHub/AiP2/DZ_12_5/podatci.bin", ios::binary | ios::in);
     while (datotekica.read((char*)&ucenici[brUcenika], sizeof(Ucenik)))
     {
         cout << ucenici[brUcenika].imePrezime << " " << ucenici[brUcenika].prosjek << endl;
@@ -29,13 +29,15 @@ int main()
     datotekica.close();
     int n;
     cin >> n;
-    for (int i = 0; i < 0; i++)
+    cin.ignore();
+    for (int i = 0; i < n; i++)
     {
         cin.getline(ucenici[brUcenika + i].imePrezime, 50);
         cin >> ucenici[brUcenika + i].prosjek;
+        cin.ignore();
     }
     sort(ucenici,ucenici + brUcenika + n,cmp);
-    datotekica.open("podatci.bin",ios::binary | ios::out | ios::trunc);
+    datotekica.open("C:/Users/Gb-gama/Documents/GitHub/AiP2/DZ_12_5/podatci.bin", ios::binary | ios::out | ios::trunc);
     datotekica.write((char*)ucenici,sizeof(Ucenik)*(brUcenika + n));
     datotekica.close();
     return 0;
